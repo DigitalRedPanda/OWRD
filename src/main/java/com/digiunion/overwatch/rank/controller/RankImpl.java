@@ -1,7 +1,5 @@
 package com.digiunion.overwatch.rank.controller;
 
-import java.net.http.HttpHeaders;
-
 public sealed interface RankImpl permits RankController {
 
  String url = "https://best-overwatch-api.herokuapp.com/player/pc/us/GamersCCCP-1569";

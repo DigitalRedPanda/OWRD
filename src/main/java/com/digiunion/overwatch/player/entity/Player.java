@@ -18,10 +18,10 @@ public class Player {
  @Column(name = "id", columnDefinition = "LONG")
  private long id;
 
- @Column(name = "rank", columnDefinition = "TEXT CHECK(rank IN ('BRONZE', 'SILVER','GOLD','PLATINUM', 'DIMOND', 'MASTER', 'GRANDMASTER','TOP500')) DEFAULT NULL")
+ @Column(name = "rank", columnDefinition = "TEXT CHECK(rank IN ('UNRANKED','BRONZE', 'SILVER','GOLD','PLATINUM', 'DIMOND', 'MASTER', 'GRAND_MASTER','TOP_500')) DEFAULT UNRANKED")
  private Rank rank;
 
- @Column(name = "stage", columnDefinition = "INTEGER CHECK(stage > 0 AND stage <= 5)")
+ @Column(name = "stage", columnDefinition = "INTEGER CHECK(stage > 0 AND stage <= 5 AND rank != TOP_500)")
  private final int stage;
 
 }

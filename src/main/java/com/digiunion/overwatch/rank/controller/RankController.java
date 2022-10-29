@@ -7,6 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
+import com.digiunion.overwatch.player.repository.PlayerRepository;
+
 @Controller
 public final class RankController implements RankImpl {
 
@@ -17,6 +19,9 @@ public final class RankController implements RankImpl {
 
   @Autowired
   private RestTemplate template;
+
+  @Autowired
+  private PlayerRepository playerRepository;
 
   private HttpHeaders headers;
 
