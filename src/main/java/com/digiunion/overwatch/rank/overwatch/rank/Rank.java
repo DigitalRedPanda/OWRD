@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public enum Rank {
 
- BRONZE, SILVER, GOLD, PLATINUM, DIMOND, MASTER, GRANDMASTER, TOP500;
+ BRONZE, SILVER, GOLD, PLATINUM, DIMOND, MASTER, GRAND_MASTER, TOP_500;
 
  Optional<Integer> rankStage;
 
