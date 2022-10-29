@@ -1,4 +1,4 @@
-package com.digiunion.overwatch.rank.overwatch.rank;
+package com.digiunion.overwatch.rank;
 
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -14,19 +14,19 @@ public enum Rank {
 
  void setRankStage(int rankStage) {
 
-  this.rankStage = Optional.of(rankStage).filter(isWithinRange);
+  this.rankStage = Optional.of(rankStage).filter(isValid);
 
  }
 
- Predicate<Integer> isWithinRange = (stage) -> {
+ Predicate<Integer> isValid = (stage) -> {
 
-  return 5 >= stage && stage > 0;
+  return 5 >= stage && stage > 0 && this != TOP_500;
 
  };
 
  Rank(int rankStage) {
 
-  this.rankStage = Optional.of(rankStage).filter(isWithinRange);
+  this.rankStage = Optional.of(rankStage).filter(isValid);
 
  }
 

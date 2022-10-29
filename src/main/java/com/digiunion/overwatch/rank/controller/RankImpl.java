@@ -1,4 +1,4 @@
-package com.digiunion.overwatch.rank.overwatch.rank;
+package com.digiunion.overwatch.rank.controller;
 
 import java.net.http.HttpHeaders;
 

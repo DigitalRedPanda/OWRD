@@ -1,10 +1,10 @@
-package com.digiunion.overwatch.rank.overwatch.rank.player;
+package com.digiunion.overwatch.player.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import com.digiunion.overwatch.rank.overwatch.rank.Rank;
+import com.digiunion.overwatch.rank.Rank;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
